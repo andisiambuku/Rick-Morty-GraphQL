@@ -2,8 +2,6 @@ import { gql } from "@apollo/client";
 import { getClient } from "./ApolloClient";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
-// 'auto' | 'force-dynamic' | 'error' | 'force-static'
 
 const userQuery = gql`
 query {
@@ -29,11 +27,8 @@ export default async function Home() {
   console.log(data)
 
   return (
-    <div>
-      <p>data received during RSC render: {JSON.stringify(data)}</p>
-      <p>
-        <Link href="/ssr">SSR examples are here</Link>
-      </p>
+    <div className="flex min-h-screen flex-col items-center justify-between p-24">
+      <p>{JSON.stringify(data)}</p>
     </div>
   );
 }

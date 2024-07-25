@@ -3,7 +3,7 @@ import { getClient } from "./ApolloClient";
 import Link from "next/link";
 
 
-const userQuery = gql`
+const mixedQuery = gql`
 query {
   characters(page: 2, filter: { name: "rick" }) {
     info {
@@ -23,7 +23,7 @@ query {
 `;
 
 export default async function Home() {
-  const { data } = await getClient().query({ query: userQuery });
+  const { data } = await getClient().query({ query: mixedQuery });
   // console.log(data)
 
   return (

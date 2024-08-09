@@ -1,28 +1,10 @@
-import { gql } from "@apollo/client";
 import { getClient } from "./ApolloClient";
-import Link from "next/link";
 import Image from 'next/image'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { characterQuery } from "@/queries/characterQuery";
 
-const characterQuery = gql`
-  query {
-    characters {
-      results {
-        name
-        status
-        species
-        image
-        origin {
-          name
-        }
-        location {
-          name
-        }
-      }
-    }
-  }
-`;
+
 
 export default async function Home() {
   const { data } = await getClient().query({ query: characterQuery });

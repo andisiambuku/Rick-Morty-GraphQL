@@ -1,21 +1,25 @@
+export interface CharacterQueryResponse {
+  characters: {
+    results: Character[];
+  };
+}
+
 export interface Character {
-    name: string;
-    status: string;
-    species: string;
-    image: string;
-    origin: {
-      name: string;
-    };
-    location: {
-      name: string;
-    };
-  }
-  
-  export interface CharactersData {
-    characters: {
-      results: Character[];
-    };
-  }
+  name: string;
+  status: string;
+  species: string;
+  image: string;
+  origin: Origin;
+  location: Location;
+}
+
+export interface Origin {
+  name: string;
+}
+
+export interface Location {
+  name: string;
+}
   
   export interface Episode {
     name: string;

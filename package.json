@@ -10,15 +10,18 @@
     "test": "jest"
   },
   "dependencies": {
-    "@apollo/client": "^3.10.8",
-    "@apollo/experimental-nextjs-app-support": "^0.11.2",
+    "@apollo/client": "^4.0.7",
+    "@apollo/client-integration-nextjs": "^0.13.2",
     "@radix-ui/react-slot": "^1.1.0",
+    "@wry/equality": "^0.5.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "graphql": "^16.11.0",
     "lucide-react": "^0.414.0",
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18",
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "rxjs": "^7.8.2",
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7"
   },

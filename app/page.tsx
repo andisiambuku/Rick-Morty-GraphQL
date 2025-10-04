@@ -2,10 +2,10 @@
 
 import { Character, CharacterQueryResponse } from "@/types/types";
 import Image from 'next/image'
-import {  useSuspenseQuery } from '@apollo/client';
 import { characterQuery } from '@/queries/characterQuery';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { useSuspenseQuery } from "@apollo/client/react";
 
 export default function Home() {
 
